@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&family=Poppins:wght@300&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #0e0e0e; /*  #0000ff #2A004E*/
+}
+
+#seleccionar-mokepon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*Se agrega espacio equitativo entre elementos*/
+    align-items: center; /*Se alinean los elementos hacia el centro*/
+    /*La guia muestra los elementos en direccion horizontal, de izquiera a derecha, es decir en flex-direction: row
+    por lo que en la mente debemos imaginar como seria en una columna porque esa ese es el valor que tenemos flex-direction: column;*/
+}
+
+#seleccionar-ataque {
+    /*Se agregaria un display: flex; si no hubiera uno ya en Javascript*/
+    flex-direction: column;
+    align-items: center;
+}
+
+#ver-mapa {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*#mapa {
+    border: 2px solid white; //Era una guia para ver el espacio que ocupaba el mapa
+}*/
+
+.tituloprincipal {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size:32px;
+    color: whitesmoke;
+    /*width: 310px; 
+    height: 50px;
+    background-color: rgb(1, 1, 54);
+    */
+    /*Este valor de ancho es debido a que no caben los emojis si solo son 100px*/
+}
+/*Si quisieramos haber seleccionado el selector de Id que ya estaba en h1 de html, 
+hubiera podido haber escrito #titulojuego { }*/
+
+.subtitulo {
+    font-size:20px;
+    color: whitesmoke;
+}                                                                                                   
+
+.tarjetas, .tarjetas-ataques {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+/*.tarjetas_grupo_a, .tarjetas_grupo_b {
+     flex-direction: row;
+}*/     
+
+
+
+
+.tarjeta-de-mokepon {
+    width: 210px;
+    height: 100px;
+    background-color: #322f44;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin: 10px;
+    border: 1px solid purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+}
+
+.tarjeta-de-mokepon:hover {
+    width: 210px;
+    height: 100px;
+    background-color: lightyellow;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin: 10px;
+    border: 1px solid purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    cursor:pointer;
+}
+
+input:checked+label {
+    background-color: red;
+    color: black;
+    /*  background-color: var(--main-color-3);
+    color: var(--main-color-2);
+    box-shadow: 1px 1px 10px var(--main-color-1);
+*/
+}
+
+
+.tarjeta-de-mokepon img {
+    width: 80px;
+    height: 80px;
+}
+
+
+
+
+#mensajes {
+    width: 200px;
+    background: whitesmoke;
+    padding: 20px;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+input {
+    display: none;
+}
+
+#boton-mokepon, #boton-mokepon-mapa {
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 10px 5px 10px 5px;
+    background: transparent;
+    border: 2px solid white;
+    color: rgb(255, 255, 255);
+    font-family: "Poppins", sans-serif;
+}
+
+.boton-de-ataque{
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background: #322f44;
+    border-color: transparent;
+    width: 80px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+
+#boton-reiniciar {
+    border: none;
+    color: #322f44;
+    font-family: "Poppins", sans-serif;
+}
+
+.ataques {
+    display: grid;
+    grid-template-columns: 230px 230px 230px;
+    color: white
+}
+
+.ataques-jugador, .ataques-rival {
+    width: 210px;
+    height: fit-content;
+    background-color: #52488d;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin: 10px;
+    border: 1px solid purple;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.historial-ataques {
+    width: 210px;
+    height: fit-content;
+    background-color: black;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin: 10px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ataques img {
+    width: 80px;
+    height: 80px;
+    /*border-radius: 50px;*/
+}
+
+.historial-ataques img {
+    width: 80px;
+    height: 120px;
+    /*border-radius: 50px;*/
+}
+
+img { 
+    display:block; 
+} 
+
+#ver-mapa button {
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 3px 1px 3px 1px;
+    background: transparent;
+    border: 1px solid white;
+    color: rgb(255, 255, 255);
+    font-family: "Poppins", sans-serif;
+}
+
+#button-control {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+#vidas-jugador, #vidas-rival{
+    font-size: 32px;
+    margin-bottom: 0;
+}
+
+@media (max-width: 800px){
+.tarjetas,.tarjetas-ataques {  
+    flex-direction: column;
+}
+.ataques {
+    grid-template-columns: 1fr;
+}
+.historial-ataques{
+    order: 0;
+}
+.ataques-jugador{
+    order: 1;
+}
+.ataques-rival{
+    order: 2;
+}
+}
+
+@media (max-width: 300px){ 
+    #ver-mapa div{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }   
+}
+

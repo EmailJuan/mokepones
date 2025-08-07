@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOKEPON!</title>
+    <link rel="stylesheet" href ="./mokeponstyles.css">
+    
+</head>
+<body>
+        <section id="seleccionar-mokepon">
+
+        <h1 id="titulojuego" class="tituloprincipal">Mokepon🔥💧🪨</h1>
+        
+        <h2 class="subtitulo">Paso 1. Elige tu Mokepon</h2>
+
+        <div id= "contenedor-tarjetas" class="tarjetas">
+            <div id= "contenedor-tarjetas-grupoa" class="tarjetas_grupo_a">    
+                
+            </div>    
+            <div id= "contenedor-tarjetas-grupob" class="tarjetas_grupo_b">       
+                
+            </div>     
+        </div>
+
+        <h2 class="subtitulo">Paso 2. Elige tu Rival</h2>
+
+<button id="boton-mokepon-mapa">En el mapa 💱 </button>
+
+<button id="boton-mokepon">Aleatorio 💱 </button>
+
+    </section>
+
+<section id= "ver-mapa">
+    <h2 class= "subtitulo"> Recorre el mapa con tu Mokepon </h2>
+    <canvas class= "mapa-mokepon" id="mapa"> </canvas>
+    <button class="button-control" id="ArrowUp">⬆️</button>
+    <div >
+        <button class="button-control" id="ArrowLeft">⬅️</button>
+        <button class="button-control" id="ArrowRight">➡️</button>
+    </div>
+    <button class="button-control" id="ArrowDown">⬇️</button>
+
+</section>
+
+
+    <section id="seleccionar-ataque">
+        
+        <h1 id="titulojuego" class="tituloprincipal">Mokepon🔥💧🪨</h1>
+        
+        <h2 class="subtitulo">Elige 5 ataques</h2>
+
+        <div id="contenedor-ataques" class="tarjetas-ataques">
+        </div>
+        
+        <div id="mensajes">
+                <h2 id="resultado-final">Comienza el Combate!</h2>
+                <section id="reiniciar">
+                </section>
+        </div>
+        <div class="ataques">
+            
+            <div class="ataques-jugador">
+                <div><p id="victorias-jugador">0</p></div>
+                <div><p id="mokepon-jugador"></p></div>
+                <div id="ataques-del-jugador"> 
+                    <p></p>
+                    <h2></h2> 
+                </div>
+            </div>
+            <div class="historial-ataques">
+                <div><p id="notificacion-combate"></p></div>
+                <div><p id="referee"></p></div>
+                <div><p id="notificacion-resultado"></p></div>    
+            </div>
+            <div class="ataques-rival">
+                <div><p id="victorias-rival">0</p></div>
+                <div><p id="mokepon-rival"></p></div>
+                <div id="ataques-del-rival">
+                    <p></p>
+                    <h2></h2> 
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <script src="./js/mokepon.js"></script>
+</body>
+</html>
